@@ -12,6 +12,8 @@ cache:
     - .install
   - packages
 
+install:
+
 script:
   - set -e
   - echo 'Installing'
