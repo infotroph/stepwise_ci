@@ -8,7 +8,6 @@ sudo: false
 
 cache: 
   - directories:
-    - $HOME/R/Library
     - .install
   - packages
 
