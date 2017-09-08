@@ -13,6 +13,7 @@ cache:
   - packages
 
 install:
+  - ls $HOME/R/Library
 
 script:
   - set -e
