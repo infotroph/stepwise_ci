@@ -1,0 +1,25 @@
+# Follow instructions on:
+# https://blog.rstudio.org/2016/03/09/r-on-travis-ci/
+
+language: r
+
+# use containers
+sudo: false
+
+cache: 
+  - directories:
+    - $HOME/R/Library
+    - .install
+  - packages
+
+script:
+  - set -e
+  - echo 'Installing'
+  - make
+  - if [[ `git status -s` ]]; then 
+      echo "These files were changed by the build process:";
+      git status -s;
+      echo "Have you run devtools::check and commited any updated Roxygen outputs?";
+      exit 1; 
+    fi
+  - set +e
