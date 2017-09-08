@@ -1,6 +1,6 @@
 NCPUS ?= 1
 
-BASE := p1 p2 p3 p4 p5
+BASE := p1 p2 p3 # p4 p5
 
 BASE_I := $(BASE:%=.install/%)
 
